@@ -1,0 +1,11 @@
+<div id="led-container" 
+     hx-get="/led_status" 
+     hx-trigger="every 2s" 
+     hx-swap="outerHTML">
+    
+    <div class="led-indicator {% if is_lit %}on{% endif %}"></div>
+    
+    <div class="status-text {% if is_lit %}status-on{% else %}status-off{% endif %}">
+        {% if is_lit %}ON{% else %}OFF{% endif %}
+    </div>
+</div>
